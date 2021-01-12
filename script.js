@@ -21,13 +21,12 @@ const addProfile = (ev) => {
     	canvas.height = img.height;
 
     	var ctx = canvas.getContext("2d");
-    	ctx.drawImage(img, 0, 0);
+    	ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-    	var dataURL = canvas.toDataURL("image/png");
-
-    	return dataURL.replace(/^data:image\/(png|jpg);base64,/, "")
+    	return canvas.toDataURL("image/png");
 	}
 }
+
 
 // function displayProfile() {
 // 	var profile = localStorage.getItem("myProfile");
