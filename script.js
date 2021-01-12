@@ -8,7 +8,7 @@ const addProfile = (ev) => {
 		bio: document.getElementById("bio").value
 	}
 	database.push(profile);
-	document.form[0].reset(); //to clear form for next entry
+	document.forms[0].reset(); //to clear form for next entry
 
 	localStorage.setItem('myProfile', JSON.stringify(database));
 	window.open("index(2).html");
