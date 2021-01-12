@@ -7,6 +7,7 @@ const addProfile = (ev) => {
 		age: document.getElementById("age").value,
 		dob: document.getElementById("dob").value,
 		bio: document.getElementById("bio").value,
+		image: document.getElementById("img").value
 // 		image: getBase64Image(imageBefore)
 	}
 	database.push(profile);
