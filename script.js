@@ -10,7 +10,7 @@ const addProfile = (ev) => {
 // 		image: getBase64Image(imageBefore)
 	}
 	database.push(profile);
-	document.querySelector('form-group').reset(); //to clear form for next entry
+	document.forms[0].reset();; //to clear form for next entry
 
 	localStorage.setItem('myProfile', JSON.stringify(database));
 	window.open("index(2).html");
