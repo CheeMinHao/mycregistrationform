@@ -18,7 +18,7 @@ const addProfile = (ev) => {
 }
 
 function previewFile() {
-	const file = document.querySelector("input[type=file]").file[0];
+	const file = document.querySelector("input[type=file]").files[0];
 	const reader = new FileReader();
 
 	reader.addEventListener("load", function () {
