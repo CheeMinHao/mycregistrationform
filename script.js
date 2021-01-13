@@ -9,10 +9,10 @@ const addProfile = (ev) => {
 	}
 	database.push(profile);
 
-	bannerImage = document.getElementById('img').onload;
-	imgData = getBase64Image(bannerImage);
-	localStorage.setItem("saved_img", imgData);
-
+	document.getElementById('img').addEventListener("load", function () {
+		imgData = getBase64Image(bannerImage);
+		localStorage.setItem("saved_img", imgData);
+	});
 	document.forms[0].reset(); //to clear form for next entry
 
 	localStorage.setItem('myProfile', JSON.stringify(database));
