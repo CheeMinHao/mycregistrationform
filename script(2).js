@@ -1,12 +1,10 @@
 window.onload = function() {
 	var disProfile = localStorage.getItem('myProfile');
 	var currentProfile = JSON.parse(disProfile);
-	document.addEventListener("DOMContentLoaded", () => {
-		const recentImageDataURL = localStorage.getItem("saved_img");
-		if(recentImageDataURL) {
-			document.querySelector("#profile_img").setAttribute("src", recentImageDataURL);
-		}
-	});
+	const recentImageDataURL = localStorage.getItem("saved_img");
+	if(recentImageDataURL) {
+		document.getElementById("profile_img").src = recentImageDataURL;
+	}
 	var res = [];
 	for(var i in currentProfile) {
 		res.push(currentProfile[i])
