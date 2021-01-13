@@ -9,7 +9,7 @@ const addProfile = (ev) => {
 	}
 	database.push(profile);
 	
-	bannerImage = document.getElementById('bannerImg');
+	bannerImage = document.getElementById('bannerImg').onload;
 	imgData = getBase64Image(bannerImage);
 	localStorage.setItem("imgData", imgData);
 
