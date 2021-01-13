@@ -11,5 +11,6 @@ window.onload = function() {
 	document.getElementById("profile_bio").innerHTML = "Bio: " + (res[0]["bio"]);
 	files = new FileReader();
 	newImage = localStorage.getItem("saved_img");
-	reader.readAsDataURL(newImage);
+	profileImage = newImage;
+	reader.readAsDataURL(profileImage);
 }
