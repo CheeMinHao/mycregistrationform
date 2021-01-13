@@ -9,27 +9,21 @@ const addProfile = (ev) => {
 	}
 	database.push(profile);
 
-	document.getElementById('img').addEventListener("change", function () {
-		imgData = getBase64Image(bannerImage);
-		localStorage.setItem("saved_img", imgData);
-	});
+	previewFile();
+
 	document.forms[0].reset(); //to clear form for next entry
 
 	localStorage.setItem('myProfile', JSON.stringify(database));
 	window.open("index(2).html");
 }
 
-function getBase64Image(img) {
-    var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
+function previewFile() {
+	const file = document.querySelector("input[type=file]").file[0];
+	const reader = new FileReader();
 
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-
-    var dataURL = canvas.toDataURL("image/png");
-
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+	reader.addEventListener("load", function () {
+		localStorage.setItem("saved_img", reader.result);
+	});
 }
 
 document.getElementById('submit').addEventListener('click', addProfile);
