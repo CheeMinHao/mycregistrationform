@@ -6,7 +6,7 @@ const addProfile = (ev) => {
 		age: document.getElementById("age").value,
 		dob: document.getElementById("dob").value,
 		bio: document.getElementById("bio").value,
-		image: drawingImage()
+		image: drawingImage(getElementById("img").value);
 	}
 	database.push(profile);
 	document.forms[0].reset(); //to clear form for next entry
@@ -14,7 +14,7 @@ const addProfile = (ev) => {
 	localStorage.setItem('myProfile', JSON.stringify(database));
 	window.open("index(2).html");
 
-	function drawingImage() {
+	function drawingImage(img) {
 		var photo = document.getElementById("img");
 		var imgCanvas = document.createElement("canvas");
 		imgContext = imgCanvas.getContext("2d");
