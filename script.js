@@ -9,7 +9,7 @@ const addProfile = (ev) => {
 	}
 	database.push(profile);
 
-	document.getElementById('img').addEventListener("load", function () {
+	document.getElementById('img').addEventListener("change", function () {
 		imgData = getBase64Image(bannerImage);
 		localStorage.setItem("saved_img", imgData);
 	});
