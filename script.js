@@ -9,10 +9,10 @@ const addProfile = (ev) => {
 	}
 	database.push(profile);
 
-	document.querySelector("#img").addEventListener("change", function() {
+	document.querySelector("input[type=file]").addEventListener("change", function() {
 		const reader = new FileReader();
 		reader.addEventListener("load", () => {
-			localStorage.setItem("saved_img", reader.result);
+			localStorage.setItem('saved_img', reader.result);
 		})
 		reader.readAsDataURL(this.files[0]);
 	});
