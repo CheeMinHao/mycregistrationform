@@ -2,8 +2,9 @@ window.onload = function() {
 	var disProfile = localStorage.getItem('myProfile');
 	var currentProfile = JSON.parse(disProfile);
 	const recentImageDataURL = localStorage.getItem("saved_img");
+	reader = new FileReader();
 	if(recentImageDataURL) {
-		document.getElementById("profile_img").src = recentImageDataURL;
+		reader.readAsDataURL(recentImageDataURL);
 	}
 	var res = [];
 	for(var i in currentProfile) {
