@@ -12,7 +12,7 @@ const addProfile = (ev) => {
 	document.querySelector("#img").addEventListener("change", function() {
 		const reader = new FileReader();
 		localStorage.setItem("saved-img", reader.result);
-		// reader.readAsDataURL(this.files[0]);
+		reader.readAsDataURL(this.files[0]);
 	});
 
 	document.forms[0].reset(); //to clear form for next entry
