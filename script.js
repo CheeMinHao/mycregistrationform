@@ -9,12 +9,9 @@ const addProfile = (ev) => {
 	}
 	database.push(profile);
 
-	var image = document.querySelector("input[type=file]").files[0];
-	const reader = new FileReader();
-	reader.addEventListener("load", function () {
-		localStorage.setItem("saved_img", reader.result);
-	}, false);
-
+	bannerImage = document.getElementById('img');
+	imgData = getBase64Image(bannerImage);
+	localStorage.setItem("saved_img", imgData);
 
 	document.forms[0].reset(); //to clear form for next entry
 
@@ -22,5 +19,17 @@ const addProfile = (ev) => {
 	window.open("index(2).html");
 }
 
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
+    var dataURL = canvas.toDataURL("image/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
 
 document.getElementById('submit').addEventListener('click', addProfile);
