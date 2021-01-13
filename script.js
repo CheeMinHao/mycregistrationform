@@ -9,13 +9,12 @@ const addProfile = (ev) => {
 	}
 	database.push(profile);
 
-	document.querySelector("input[type=file]").addEventListener("change", function() {
-		const reader = new FileReader();
-		reader.addEventListener("load", () => {
-			localStorage.setItem('saved_img', reader.result);
-		})
-		reader.readAsDataURL(this.files[0]);
-	});
+	var image = document.querySelector("input[type=file]").files[0];
+	const reader = new FileReader();
+	reader.addEventListener("load", function () {
+		localStorage.setItem("saved_img", reader.result);
+	}, false);
+
 
 	document.forms[0].reset(); //to clear form for next entry
 
