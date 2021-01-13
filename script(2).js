@@ -2,10 +2,6 @@ window.onload = function() {
 	var disProfile = localStorage.getItem('myProfile');
 	var currentProfile = JSON.parse(disProfile);
 	const recentImageDataURL = localStorage.getItem("saved_img");
-	reader = new FileReader();
-	if(recentImageDataURL) {
-		reader.readAsDataURL(recentImageDataURL);
-	}
 	var res = [];
 	for(var i in currentProfile) {
 		res.push(currentProfile[i])
@@ -14,4 +10,5 @@ window.onload = function() {
 	document.getElementById("profile_age").innerHTML = "Age: " + (res[0]["age"]);
 	document.getElementById("profile_dob").innerHTML = "Date of Birth: " + (res[0]["dob"]);
 	document.getElementById("profile_bio").innerHTML = "Bio: " + (res[0]["bio"]);
+	document.getElementById("profile_img").src = recentImageDataURL;
 }
