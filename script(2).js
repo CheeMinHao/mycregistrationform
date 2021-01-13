@@ -9,8 +9,8 @@ window.onload = function() {
 	document.getElementById("profile_age").innerHTML = "Age: " + (res[0]["age"]);
 	document.getElementById("profile_dob").innerHTML = "Date of Birth: " + (res[0]["dob"]);
 	document.getElementById("profile_bio").innerHTML = "Bio: " + (res[0]["bio"]);
-	files = new FileReader();
+	file = new FileReader();
 	newImage = localStorage.getItem("saved_img");
 	profileImage = newImage;
-	reader.readAsDataURL(profileImage);
+	document.getElementById("profile_img").src = profileImage;
 }
