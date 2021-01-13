@@ -9,8 +9,6 @@ const addProfile = (ev) => {
 	}
 	database.push(profile);
 
-	previewFile();
-
 	document.forms[0].reset(); //to clear form for next entry
 
 	localStorage.setItem('myProfile', JSON.stringify(database));
