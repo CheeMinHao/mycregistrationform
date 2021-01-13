@@ -6,7 +6,7 @@ const addProfile = (ev) => {
 		age: document.getElementById("age").value,
 		dob: document.getElementById("dob").value,
 		bio: document.getElementById("bio").value,
-		image: drawingImage(getElementById("img").value)
+		image: drawingImage(document.getElementById("img").value)
 	}
 	database.push(profile);
 	document.forms[0].reset(); //to clear form for next entry
