@@ -9,6 +9,7 @@ body {
 	padding: 0;
 }
 
+/*links in the nav bar*/
 .nav__bar, a {
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
@@ -17,6 +18,7 @@ body {
 	text-decoration: none;
 }
 
+/*all elements in header*/
 header {
 	display: flex;
 	justify-content: space-between;
@@ -25,16 +27,19 @@ header {
 	background-color: #fc7307;
 }
 
+/*for logo hover status*/
 img {
 	width: 5rem;
 	cursor: pointer;
 }
 
+/*put nav links in a straight line*/
 .nav__links li {
 	display: inline-block;
 	padding: 0px 20px;
 }
 
+/*having a transition effect which changes colour of nav link when hovered*/
 .nav__links li a {
 	transition: all 0.3s ease 0s;
 }
@@ -43,11 +48,12 @@ img {
 	color: #0088a9;
 }
 
-.form-group {
-	margin: 0 auto 1.25rem auto;
-	padding: 0.25rem;
+/*general styling of form section*/
+.form-main {
+	padding: 10px 10px 10px 10px;
 }
 
+/*styling of answer tab on questions whcih require short text/numbers*/
 .texting {
 	background-color: transparent;
 	width: 100%;
@@ -59,10 +65,13 @@ img {
   	border-radius: 0;
 }
 
-.form-main {
-	padding: 10px 10px 10px 10px;
+/*styling of all form questions and answers*/
+.form-group {
+	margin: 0 auto 1.25rem auto;
+	padding: 0.25rem;
 }
 
+/*styling for all form labels*/
 .form-label {
 	display: flex;
 	align-items: center;
@@ -70,17 +79,20 @@ img {
 	margin-bottom: 0.5rem;
 }
 
+/*modify width of age answer section of the form*/
 .agetext {
 	width: 20%;
 }
 
+/*modify the size of the bio text input*/
 .input-textarea {
     min-height: 120px;
     width: 100%;
     resize: vertical;
 }
 
-input[type=submit]{
+/*styling of submit button*/
+.button1 {
 	border-radius: 8px;
 	height: 2rem;
 	width: 100%;
@@ -89,8 +101,13 @@ input[type=submit]{
 	font-size: 16px
 }
 
+/*styling of footer*/
 .footer {
-  background-color: #f1f1f1;
-  padding:10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: orange;
+  color: white;
   text-align: center;
 }
