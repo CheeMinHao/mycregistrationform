@@ -19,6 +19,8 @@ const addProfile = (ev) => {
 		reader.addEventListener("load", () => {
 			localStorage.setItem("saved_img", reader.result);
 		});
+		
+		reader.readAsDataURL(this.files[0]);
 	});
 
 	document.forms[0].reset(); //to clear form for next entry
