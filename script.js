@@ -13,16 +13,12 @@ const addProfile = (ev) => {
 // 	imgData = getBase64Image(bannerImage);
 // 	localStorage.setItem("imgData", imgData);
 	
-	function previewFile() {
 	const file = document.querySelector("input[type=file]").files[0];
-	const reader = new FileReader();
+	const reader = FileReader();
 
 	reader.addEventListener("load", function () {
 		localStorage.setItem("saved_img", reader.result);
 	});
-	}
-	
-	previewFile();
 
 	document.forms[0].reset(); //to clear form for next entry
 
