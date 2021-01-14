@@ -1,8 +1,10 @@
+/*styling of header for page*/
 .page_header {
 	padding: 30px 0 20px;
 	text-align: center;
 }
 
+/*create box for profile area*/
 .wrapper {
 	display: grid;
 	grid-template-columns: 35% auto;
@@ -12,11 +14,13 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+/*maximise size of image in profile section*/
 .wrapper .profile_image img {
 	width: 100%;
 	height: 100%;
 }
 
+/*styling of info in profile section*/
 .wrapper .profile_info {
 	background: black;
 	color: white;
@@ -26,6 +30,7 @@
 	padding: 40px 40px;
 }
 
+/* styling of footer */
 .footer {
   background-color: #f1f1f1;
   padding:10px;
