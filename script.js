@@ -19,7 +19,7 @@ const addProfile = (ev) => {
 	window.open("index(2).html");
 }
 
-document.querySelector("input[type=file]").addEventListener("change", function() {
+document.querySelector("#img").addEventListener("change", function() {
 	const reader = new FileReader();
 
 	reader.addEventListener("load", () => {
