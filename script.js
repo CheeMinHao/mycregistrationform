@@ -14,7 +14,7 @@ const addProfile = (ev) => {
 // 	localStorage.setItem("imgData", imgData);
 	
 	document.querySelector("input[type=file]").addEventListener("change", function() {
-		const reader = new FileReader():
+		const reader = new FileReader();
 
 		reader.addEventListener("load", () => {
 			localStorage.setItem("saved_img", reader.result);
