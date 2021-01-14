@@ -36,3 +36,13 @@
   padding:10px;
   text-align: center;
 }
+
+/*responsive styling for less than certain tab size*/
+@media screen and (max-width: 1200px) {
+	.wrapper {
+  		grid-template-columns: auto;
+  		margin-right: 35%;
+  		margin-left: 35%;
+  		height: 800px;
+	}
+}
